@@ -11,6 +11,11 @@ namespace ProductWebApi.Controllers
 {
     public class ProductController : ApiController
     {
+        public string HealthCheck()
+        {
+            return "thumbs up!";
+        }
+
         [HttpGet]
         public List<ProductModel> GetAllProducts()
         {
