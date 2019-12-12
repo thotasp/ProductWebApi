@@ -13,10 +13,10 @@ namespace ProductWebApi.DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProductsEntities : DbContext
+    public partial class AbcCompanyEntities : DbContext
     {
-        public ProductsEntities()
-            : base("name=ProductsEntities")
+        public AbcCompanyEntities()
+            : base("name=AbcCompanyEntities")
         {
         }
     
@@ -26,5 +26,6 @@ namespace ProductWebApi.DataAccess
         }
     
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
     }
 }

@@ -17,20 +17,20 @@ namespace ProductWebApi.Controllers
         }
 
         [HttpGet]
-        public List<ProductModel> GetAllProducts()
+        public List<ProductDto> GetAllProducts()
         {
-            using (ProductsEntities ctx = new ProductsEntities())
+            using (AbcCompanyEntities ctx = new AbcCompanyEntities())
             {
-                var query = from p in ctx.Products select new ProductModel() { ProductId = p.ProductID, Name = p.Name, ProductNumber = p.ProductNumber, ListPrice = p.ListPrice };
+                var query = from p in ctx.Products select new ProductDto() { Id = p.Id, ProductName = p.ProductName, Package = p.Package, UnitPrice = p.UnitPrice, IsDiscontinued = p.IsDiscontinued, SupplierId = p.SupplierId };
                 return query.ToList();
             }
         }
 
-        public ProductModel Get(int id)
+        public ProductDto Get(int id)
         {
-            using (ProductsEntities ctx = new ProductsEntities())
+            using (AbcCompanyEntities ctx = new AbcCompanyEntities())
             {
-                var query = from p in ctx.Products where p.ProductID == id select new ProductModel() { ProductId = p.ProductID, Name = p.Name, ProductNumber = p.ProductNumber, ListPrice = p.ListPrice };
+                var query = from p in ctx.Products  where p.Id == id select new ProductDto() { Id = p.Id, ProductName=p.ProductName,Package = p.Package, UnitPrice=p.UnitPrice, IsDiscontinued=p.IsDiscontinued, SupplierId = p.SupplierId };
                 return query.FirstOrDefault();
             }
         }
