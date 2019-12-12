@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DataAccess\AdventureWorks.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
