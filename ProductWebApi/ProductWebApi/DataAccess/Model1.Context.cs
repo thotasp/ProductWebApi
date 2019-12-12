@@ -13,10 +13,10 @@ namespace ProductWebApi.DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AdventureWorksEntities : DbContext
+    public partial class ProductsEntities : DbContext
     {
-        public AdventureWorksEntities()
-            : base("name=AdventureWorksEntities")
+        public ProductsEntities()
+            : base("name=ProductsEntities")
         {
         }
     

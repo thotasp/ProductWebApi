@@ -92,15 +92,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataAccess\AdventureWorks.Context.tt">
+    <Content Include="DataAccess\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataAccess\AdventureWorks.tt">
+    <Content Include="DataAccess\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="default.html" />
     <Content Include="Global.asax" />
@@ -109,23 +109,23 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="DataAccess\AdventureWorks.Context.cs">
+    <Compile Include="DataAccess\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\AdventureWorks.cs">
+    <Compile Include="DataAccess\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\AdventureWorks.Designer.cs">
+    <Compile Include="DataAccess\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\Product.cs">
-      <DependentUpon>AdventureWorks.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -135,12 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <EntityDeploy Include="DataAccess\AdventureWorks.edmx">
+    <EntityDeploy Include="DataAccess\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DataAccess\AdventureWorks.edmx.diagram">
-      <DependentUpon>AdventureWorks.edmx</DependentUpon>
+    <Content Include="DataAccess\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

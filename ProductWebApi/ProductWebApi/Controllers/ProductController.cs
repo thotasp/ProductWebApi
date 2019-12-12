@@ -19,7 +19,7 @@ namespace ProductWebApi.Controllers
         [HttpGet]
         public List<ProductModel> GetAllProducts()
         {
-            using (AdventureWorksEntities ctx = new AdventureWorksEntities())
+            using (ProductsEntities ctx = new ProductsEntities())
             {
                 var query = from p in ctx.Products select new ProductModel() { ProductId = p.ProductID, Name = p.Name, ProductNumber = p.ProductNumber, ListPrice = p.ListPrice };
                 return query.ToList();
@@ -28,7 +28,7 @@ namespace ProductWebApi.Controllers
 
         public ProductModel Get(int id)
         {
-            using (AdventureWorksEntities ctx = new AdventureWorksEntities())
+            using (ProductsEntities ctx = new ProductsEntities())
             {
                 var query = from p in ctx.Products where p.ProductID == id select new ProductModel() { ProductId = p.ProductID, Name = p.Name, ProductNumber = p.ProductNumber, ListPrice = p.ListPrice };
                 return query.FirstOrDefault();
