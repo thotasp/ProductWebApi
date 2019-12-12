@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MvcWebApi1.DataAccess
+namespace ProductWebApi.DataAccess
 {
     using System;
     using System.Data.Entity;

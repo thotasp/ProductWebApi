@@ -1,5 +1,5 @@
-﻿using MvcWebApi1.DataAccess;
-using MvcWebApi1.Models;
+﻿using ProductWebApi.DataAccess;
+using ProductWebApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace MvcWebApi1.Controllers
+namespace ProductWebApi.Controllers
 {
     public class HomeController : ApiController
     {
