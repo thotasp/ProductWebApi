@@ -7,29 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProductWebApi.DataAccess
+namespace ResearcherInfoService.DataAccess
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Supplier
+    public partial class Expertise
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Supplier()
+        public Expertise()
         {
-            this.Products = new HashSet<Product>();
+            this.ResearcherExpertises = new HashSet<ResearcherExpertise>();
         }
     
-        public int Id { get; set; }
-        public string CompanyName { get; set; }
-        public string ContactName { get; set; }
-        public string ContactTitle { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-        public string Phone { get; set; }
-        public string Fax { get; set; }
+        public int ExpertiseId { get; set; }
+        public string ExpertiseName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ResearcherExpertise> ResearcherExpertises { get; set; }
     }
 }

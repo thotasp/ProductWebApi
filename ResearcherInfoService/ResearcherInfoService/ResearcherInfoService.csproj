@@ -14,8 +14,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProductWebApi</RootNamespace>
-    <AssemblyName>ProductWebApi</AssemblyName>
+    <RootNamespace>ResearcherInfoService</RootNamespace>
+    <AssemblyName>ResearcherInfoService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -92,15 +92,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataAccess\Product.Context.tt">
+    <Content Include="DataAccess\ScheduleEx.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Product.edmx</DependentUpon>
-      <LastGenOutput>Product.Context.cs</LastGenOutput>
+      <DependentUpon>ScheduleEx.edmx</DependentUpon>
+      <LastGenOutput>ScheduleEx.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataAccess\Product.tt">
+    <Content Include="DataAccess\ScheduleEx.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Product.edmx</DependentUpon>
-      <LastGenOutput>Product1.cs</LastGenOutput>
+      <DependentUpon>ScheduleEx.edmx</DependentUpon>
+      <LastGenOutput>ScheduleEx.cs</LastGenOutput>
     </Content>
     <Content Include="default.html" />
     <Content Include="Global.asax" />
@@ -108,43 +108,68 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="DataAccess\Product.Context.cs">
+    <Compile Include="Controllers\AvailabilityController.cs" />
+    <Compile Include="Controllers\ExpertiseController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="DataAccess\ApprovalStatus.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Expertise.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Project.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ResearcherApproval.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ResearcherAvailability.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ResearcherExpertise.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Role.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ScheduleEx.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Product.Context.tt</DependentUpon>
+      <DependentUpon>ScheduleEx.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Product.cs">
-      <DependentUpon>Product.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\Product.Designer.cs">
+    <Compile Include="DataAccess\ScheduleEx.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Product.edmx</DependentUpon>
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Product1.cs">
+    <Compile Include="DataAccess\ScheduleEx.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Product.tt</DependentUpon>
+      <DependentUpon>ScheduleEx.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Supplier.cs">
-      <DependentUpon>Product.tt</DependentUpon>
+    <Compile Include="DataAccess\User.cs">
+      <DependentUpon>ScheduleEx.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProductDto.cs" />
-    <Compile Include="Models\SupplierDto.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Models\ProjectDto.cs" />
+    <Compile Include="Models\ResearcherApprovalDto.cs" />
+    <Compile Include="Models\ResearcherAvailabilityDto.cs" />
+    <Compile Include="Models\ResearcherExpertiseDto.cs" />
+    <Compile Include="Models\UserDto.cs" />
+    <Compile Include="Models\ExpertiseDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <EntityDeploy Include="DataAccess\Product.edmx">
+    <EntityDeploy Include="DataAccess\ScheduleEx.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Product.Designer.cs</LastGenOutput>
+      <LastGenOutput>ScheduleEx.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DataAccess\Product.edmx.diagram">
-      <DependentUpon>Product.edmx</DependentUpon>
+    <Content Include="DataAccess\ScheduleEx.edmx.diagram">
+      <DependentUpon>ScheduleEx.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

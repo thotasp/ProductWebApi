@@ -7,20 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProductWebApi.DataAccess
+namespace ResearcherInfoService.DataAccess
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class ResearcherExpertise
     {
-        public int Id { get; set; }
-        public string ProductName { get; set; }
-        public int SupplierId { get; set; }
-        public Nullable<decimal> UnitPrice { get; set; }
-        public string Package { get; set; }
-        public bool IsDiscontinued { get; set; }
+        public int ResearchExpertiseId { get; set; }
+        public string AffiliatedOrgName { get; set; }
+        public int ResearcherId { get; set; }
+        public int ExpertiseId { get; set; }
     
-        public virtual Supplier Supplier { get; set; }
+        public virtual Expertise Expertise { get; set; }
+        public virtual User User { get; set; }
     }
 }
